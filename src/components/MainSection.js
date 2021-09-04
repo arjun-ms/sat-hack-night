@@ -4,7 +4,7 @@ import Data from "./Data";
 export default function MainSection({ userData }) {
     return (
         <>
-            {userData.message === undefined ? (
+            {userData && userData.message === undefined ? (
                 <Data userData={userData} />
             ) : (
                 <Failed />
