@@ -1,6 +1,5 @@
 
 <p align="center">
- <img width="120px" src="https://www.flaticon.com/authors/vitaly-gorbachev" />
+ <img width="120px" src="https://raw.githubusercontent.com/arjun-ms/Sat-Hack-Night/main/assets/resume-and-cv.png" />
 </p>
 
-<!-- <div>Icons made by <a href="https://www.flaticon.com/authors/vitaly-gorbachev" title="Vitaly Gorbachev">Vitaly Gorbachev</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
