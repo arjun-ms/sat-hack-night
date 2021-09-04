@@ -11,10 +11,16 @@ const StyledButton = styled.button`
     border-radius: 20px;
 `;
 
-export default function Button() {
+export default function Button({ date }) {
+    const GetData = (value) => {
+        console.log(value);
+        console.log("working");
+    };
     return (
         <>
-            <StyledButton type="submit">Search</StyledButton>
+            <StyledButton onClick={() => GetData(date)} type="submit">
+                Search
+            </StyledButton>
         </>
     );
 }

@@ -12,6 +12,8 @@ const StyledInput = styled.input`
     text-align: center;
 `;
 
-export default function Input() {
-    return <StyledInput></StyledInput>;
+export default function Input({ setInput }) {
+    return (
+        <StyledInput onChange={(e) => setInput(e.target.value)}></StyledInput>
+    );
 }

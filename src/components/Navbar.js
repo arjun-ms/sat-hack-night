@@ -1,3 +1,4 @@
+import { useState } from "react";
 import React from "react";
 import styled from "styled-components";
 import logo from "../assets/resume-and-cv.png";
@@ -47,8 +48,9 @@ const Navigation = styled.nav`
     }
 `;
 
-function Navbar({ titleColor, setTitleColor }) {
+function Navbar() {
     const printResume = () => window.print();
+    const [input, setInput] = useState(false);
 
     return (
         <>
@@ -58,8 +60,8 @@ function Navbar({ titleColor, setTitleColor }) {
                 </div>
                 <div className="nav-links">
                     <>
-                        <Input />
-                        <Button />
+                        <Input setInput={setInput} />
+                        <Button date={input} />
                         <a href="https://github.com/arjun-ms/Sat-Hack-Night">
                             <i className="fab fa-github"></i>Open in Github
                         </a>
