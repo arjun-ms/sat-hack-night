@@ -1,8 +1,8 @@
 import React from "react";
-// import { useLocation, Link } from "react-router-dom";
 import styled from "styled-components";
-
-// import logo from "../assets/resume-and-cv.png";
+import logo from "../assets/resume-and-cv.png";
+import Input from "./Input";
+import Button from "./Button";
 
 const Navigation = styled.nav`
     position: sticky;
@@ -48,41 +48,32 @@ const Navigation = styled.nav`
 `;
 
 function Navbar({ titleColor, setTitleColor }) {
-    // const location = useLocation();
     const printResume = () => window.print();
 
     return (
-        <Navigation id="navbar">
-            <div className="title">
-                {/* <img src={logo} alt="logo" /> */}
-                <span>
-                    <h1>{/* <Link to="/">Github Resume Generator</Link> */}</h1>
-                </span>
-            </div>
-            <div className="nav-links">
-                {true ? (
-                    <a href="https://github.com/arjun-ms/Sat-Hack-Night">
-                        <i className="fab fa-github"></i>Open in Github
-                    </a>
-                ) : (
+        <>
+            <Navigation id="navbar">
+                <div className="title">
+                    <img src={logo} alt="logo" />
+                </div>
+                <div className="nav-links">
                     <>
-                        <input
-                            className="anchor-style"
-                            type="color"
-                            value={titleColor}
-                            onChange={(e) => setTitleColor(e.target.value)}
-                        />
+                        <Input />
+                        <Button />
+                        <a href="https://github.com/arjun-ms/Sat-Hack-Night">
+                            <i className="fab fa-github"></i>Open in Github
+                        </a>
                         <span className="anchor-style" onClick={printResume}>
                             <i className="fas fa-print"></i>
                             Print
                         </span>
                     </>
-                )}
-                <a href="https://github.com/arjun-ms/Sat-Hack-Night/fork">
-                    <i className="fas fa-code-branch"></i>Fork
-                </a>
-            </div>
-        </Navigation>
+                    <a href="https://github.com/arjun-ms/Sat-Hack-Night/fork">
+                        <i className="fas fa-code-branch"></i>Fork
+                    </a>
+                </div>
+            </Navigation>
+        </>
     );
 }
 
