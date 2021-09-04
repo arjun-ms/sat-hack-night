@@ -12,9 +12,17 @@ const StyledButton = styled.button`
 `;
 
 export default function Button({ date }) {
-    const GetData = (value) => {
-        console.log(value);
-        console.log("working");
+    const fetchData = async (username) => {
+        const res = await fetch(
+            "https://api.github.com/users/sidharthpunathil"
+        );
+        const data = await res.json();
+        return data;
+    };
+
+    const GetData = async (value) => {
+        const profileData = await fetchData(value);
+        console.log(profileData);
     };
     return (
         <>
