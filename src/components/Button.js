@@ -11,22 +11,20 @@ const StyledButton = styled.button`
     border-radius: 20px;
 `;
 
-export default function Button({ date }) {
+export default function Button({ date, setUserData }) {
     const fetchData = async (username) => {
-        const res = await fetch(
-            "https://api.github.com/users/sidharthpunathil"
-        );
+        const res = await fetch(`https://api.github.com/users/${username}`);
         const data = await res.json();
         return data;
     };
 
-    const GetData = async (value) => {
+    const returnData = async (value) => {
         const profileData = await fetchData(value);
-        console.log(profileData);
+        setUserData(profileData);
     };
     return (
         <>
-            <StyledButton onClick={() => GetData(date)} type="submit">
+            <StyledButton onClick={() => returnData(date)} type="submit">
                 Search
             </StyledButton>
         </>
