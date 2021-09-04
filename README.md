@@ -14,5 +14,3 @@
 
 <br />
 
-Enter your username in the homepage and click Generate. We request your public data from Github GraphQL API v4 and generate your resume. Save the resume by clicking on print in the navigation bar and adjust margins as required. (Please use Laptop/ Desktop for better experience) If you're using chrome, make sure that Background Graphics is checked in more settings option while saving the document.
-
