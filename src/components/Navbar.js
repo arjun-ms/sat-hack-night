@@ -48,7 +48,7 @@ const Navigation = styled.nav`
     }
 `;
 
-function Navbar() {
+function Navbar({ setUserData }) {
     const printResume = () => window.print();
     const [input, setInput] = useState(false);
 
@@ -61,7 +61,7 @@ function Navbar() {
                 <div className="nav-links">
                     <>
                         <Input setInput={setInput} />
-                        <Button date={input} />
+                        <Button date={input} setUserData={setUserData} />
                         <a href="https://github.com/arjun-ms/Sat-Hack-Night">
                             <i className="fab fa-github"></i>Open in Github
                         </a>
