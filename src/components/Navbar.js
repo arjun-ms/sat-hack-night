@@ -1,8 +1,8 @@
 import React from "react";
-import { useLocation, Link } from "react-router-dom";
+// import { useLocation, Link } from "react-router-dom";
 import styled from "styled-components";
 
-import logo from "../assets/resume-and-cv.png";
+// import logo from "../assets/resume-and-cv.png";
 
 const Navigation = styled.nav`
     position: sticky;
@@ -48,21 +48,19 @@ const Navigation = styled.nav`
 `;
 
 function Navbar({ titleColor, setTitleColor }) {
-    const location = useLocation();
+    // const location = useLocation();
     const printResume = () => window.print();
 
     return (
         <Navigation id="navbar">
             <div className="title">
-                <img src={logo} alt="logo" />
+                {/* <img src={logo} alt="logo" /> */}
                 <span>
-                    <h1>
-                        <Link to="/">Github Resume Generator</Link>
-                    </h1>
+                    <h1>{/* <Link to="/">Github Resume Generator</Link> */}</h1>
                 </span>
             </div>
             <div className="nav-links">
-                {location.pathname === "/" ? (
+                {true ? (
                     <a href="https://github.com/arjun-ms/Sat-Hack-Night">
                         <i className="fab fa-github"></i>Open in Github
                     </a>
