@@ -35,7 +35,10 @@ class GithubTree:
             
             for each in self.followers_of_user:
                 self.get_followers_length(each)
-                
+
+            for each in self.followers_of_user:
+                self.follower_list.remove(each)
+                self.follower_list(each)
 
     def print_data(self, username, followers):
         print(f"{username}:{followers}")
