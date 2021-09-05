@@ -2,7 +2,7 @@
  <img width="120px" src="https://raw.githubusercontent.com/arjun-ms/sat-hack-night/main/src/assets/resume-and-cv.png" />
 </p>
 
-<h1 align="center">Github Resume Generator</h1>
+<h1 align="center">Github Followers Generator</h1>
 
 <p align="center"> 🌟 Star this repository, if you find it useful.</p> 
 <div align="center">
